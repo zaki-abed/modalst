@@ -7,9 +7,6 @@ Table of Content
 ------------------------------------------------
 
 1. General Styles
-    1.1 Import font-family (Cairo)
-    1.2 Global layout and resets
-    1.3 Components
 2. Header Styles
 3. Hero Style
 4. About Us Styles
@@ -17,14 +14,12 @@ Table of Content
 6. Footer
 */
 
+
 /* ------------------------------ */
-/* 1.1 Font: Cairo */
+/* 1. Global layout and resets */
 /* ------------------------------ */
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
 
-/* ------------------------------ */
-/* 1.2 Global layout and resets */
-/* ------------------------------ */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -38,7 +33,6 @@ Table of Content
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 120px;
 }
 
 body {
@@ -57,10 +51,7 @@ ul {
   margin: 0;
   padding: 0;
 }
-/* ------------------------------ */
-/* 1.3 Components */
-/* ------------------------------ */
-/* ✅ تحديد موقع الأزرار العائمة */
+
 .floating-contact {
     position: fixed;
     bottom: 20px;
@@ -68,7 +59,6 @@ ul {
     z-index: 1000;
 }
 
-/* ✅ زر فتح/إغلاق القائمة */
 .toggle-btn {
     background: rgba(51, 51, 51, 1);
     color: #fff;
@@ -87,7 +77,6 @@ ul {
     transform: scale(1.1);
 }
 
-/* ✅ القائمة العائمة */
 .contact-menu {
     display: flex;
     flex-direction: column;
@@ -107,7 +96,6 @@ ul {
     transform: translateY(0);
 }
 
-/* ✅ تصميم أزرار التواصل */
 .contact-btn {
     background: #444;
     color: #fff;
@@ -124,7 +112,6 @@ ul {
     transition: all 0.3s ease-in-out;
 }
 
-/* ✅ ألوان مخصصة لكل زر */
 .contact-btn.whatsapp {
     background: #25D366;
 }
@@ -133,7 +120,6 @@ ul {
     background: #3498db;
 }
 
-/* ✅ تأثير hover */
 .contact-btn:hover {
     transform: scale(1.1);
     opacity: 0.9;
@@ -184,54 +170,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* ------------------------------ */
-/* 1.3.4 Submit Button with Loader */
-/* ------------------------------ */
-.error {
-    color: red;
-    margin-top: 5px;
-    display: inline-block;
-    font-size: 12px;
-}
-
-#submit-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-.loader-for-btn {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    position: relative;
-    animation: rotate 1s linear infinite;
-    display: none;
-}
-
-.loader-for-btn::before {
-    content: "";
-    box-sizing: border-box;
-    position: absolute;
-    inset: 0px;
-    border-radius: 50%;
-    border: 3px solid white;
-    animation: prixClipFix 2s linear infinite ;
-}
-
-@keyframes rotate {
-    100%   {transform: rotate(360deg)}
-}
-
-@keyframes prixClipFix {
-    0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
-    25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
-    50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
-    75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
-    100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
-}
-
-/* ------------------------------ */
 /* 2. Header Styles */
 /* ------------------------------ */
 .header {
@@ -255,6 +193,27 @@ body::-webkit-scrollbar-thumb {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+ .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 99;
+}
+
+ .menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+ .mobile-menu.active {
+    box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.3);
+}
 
 .header .container {
     display: flex;
@@ -297,24 +256,28 @@ body::-webkit-scrollbar-thumb {
     .header .mobile-menu {
         position: absolute;
         width: 90%;
-        top: 95px;
+        top: 75px;
+        right: 22px;
         flex-direction: column;
         align-items: start;
         background-color: white;
-        padding: 10px 20px 62px;
-        right: 22px;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding: 10px 20px 20px;
         transform: translateX(100%);
         opacity: 0;
         visibility: hidden;
         transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s;
-
     }
     
     .header .mobile-menu.active {
         transform: translateX(0);
         opacity: 1;
         visibility: visible;
+    }
+}
+
+@media (max-width: 768px) {
+    .header .mobile-menu {
+        top: 58px;
     }
 }
 
@@ -434,7 +397,7 @@ body::-webkit-scrollbar-thumb {
     padding-right: 25px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .header .mobile-menu .lang-dropdown {
         padding-top: 15px;
     }
@@ -480,7 +443,7 @@ body::-webkit-scrollbar-thumb {
     text-decoration: none;
     color: #1F1F1F;
     display: block;
-    transition: background 0.3s, color 0.3s;
+    transition: 0.3s, color 0.3s;
 }
 
 .header .mobile-menu .lang-menu li a:hover {
@@ -512,6 +475,27 @@ body::-webkit-scrollbar-thumb {
         display: block;
     }
 }
+
+@media (max-width: 768px) {
+    .header .logo img {
+        width: 120px;
+    }
+
+    .header .container {
+        justify-content: start;
+    }
+
+    .header .btn-primary {
+        font-size: 14px;
+        padding: 10px 15px;
+        margin-right: -5px;
+    }
+
+    .header {
+        min-height: 80px;
+    }
+}
+
 /* ------------------------------ */
 /* 2. Hero Styles */
 /* ------------------------------ */
@@ -521,6 +505,13 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
     justify-content: center;
     padding: 20px;
+    padding-top: 100px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 0;
+    }
 }
 
 .hero .container {
