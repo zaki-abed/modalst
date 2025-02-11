@@ -487,21 +487,28 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 768px) {
     .header .logo img {
-        width: 120px;
+        width: 100px;
     }
 
     .header .container {
         justify-content: start;
     }
 
-    .header .btn-primary {
-        font-size: 14px;
-        padding: 10px 15px;
-        margin-right: -5px;
+    .header .btn-primary,
+    .btn-secondary {
+        font-size: 12px;
+        padding: 8px 9px;
+    }
+    .btn-secondary {
+        padding: 7px 9px;
     }
 
     .header {
         min-height: 80px;
+    }
+
+    .header .container {
+        gap: 10px;
     }
 }
 /* ------------------------------ */
