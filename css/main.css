@@ -323,12 +323,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 .header .mobile-menu .main-nav > li > a.active {
-    color: var(--secondaryColor);
+    color: var(--mainColor);
 }
 
 @media (max-width: 991px) {
     .header .mobile-menu .main-nav > li > a.active {
-        border-left-color: var(--secondaryColor);
+        border-left-color: var(--mainColor);
         background: rgba(238, 238, 238, 1);
     }
 
@@ -359,7 +359,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .header .mobile-menu .main-nav > li > a:hover {
-    color: var(--secondaryColor);
+    color: var(--mainColor);
 }
 
 .header .mobile-menu .main-nav li a i {
@@ -390,7 +390,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .header .mobile-menu .auth-links a:hover {
-    color: var(--secondaryColor);
+    color: var(--mainColor);
 }
 
 .header .mobile-menu .lang-dropdown {
@@ -420,7 +420,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .header .mobile-menu .lang-btn:hover {
-    color: var(--secondaryColor);
+    color: var(--mainColor);
 }
 
 .header .mobile-menu .lang-menu {
@@ -451,7 +451,7 @@ body::-webkit-scrollbar-thumb {
 
 .header .mobile-menu .lang-menu li a:hover {
     background: rgba(0, 0, 0, 0.1);
-    color: var(--secondaryColor);
+    color: var(--mainColor);
 }
 
 .header .mobile-menu .lang-dropdown.active .lang-menu {
