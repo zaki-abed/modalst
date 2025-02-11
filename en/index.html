@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Modalst is your premier destination for modern elegance, where we take pride in offering the latest fashion trends that enhance your beauty and give you a unique look on every occasion. Our store combines refined designs, high quality, and modern touches to provide everything that expresses your unique style.">
+  <meta name="keywords" content="fashion, style, modern clothes, Modalst, online shopping, dresses, trend">
+  <meta name="author" content="Modalst">
+  <link rel="icon" href="../image/launcher_icon.png" sizes="32x32"/>
+  <title>Modalst | Stand Out with Your Unique Style</title>
+  <!-- Normalize.css: Reset browser default styles for consistency -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <!-- FontAwesome: Icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Bootstrap: Grid framework and responsive utilities -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- AOS: Animate On Scroll library -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Additional AOS Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- Main Stylesheet: Custom styles for the website -->
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/style-ltr.css">
+
+</head>
+<body>
+  <!-- Header -->
+  <div class="header" id="header">
+    <div class="container">
+      <a class="logo" href="index.html">
+        <img src="../image/logo.png" alt="Modalst">
+      </a>
+      <a href="merchant-waiting.html" class="btn-primary d-block d-sm-none">Join Us as a Merchant</a>
+      <div class="mobile-menu">
+        <ul class="main-nav">
+          <li><a href="index.html" class="nav-home active">Home</a></li>
+          <li><a href="#about" class="nav-about">About Us</a></li>
+          <li><a href="#contact" class="nav-contact">Contact Us</a></li>
+        </ul>
+        <div class="auth-links">
+          <a href="merchant-waiting.html" class="btn-primary d-none d-sm-block">Join Us as a Merchant</a>
+          <a href="#" class="btn-secondary">Login</a>
+        </div>
+        <div class="lang-dropdown">
+          <button class="lang-btn">
+            <i class="fa-solid fa-globe"></i> <span id="selected-lang">English</span>
+          </button>
+          <ul class="lang-menu">
+            <li><a href="/ar/index.html" onclick="setLanguage('ar')">Arabic (AR)</a></li>
+            <li><a href="#" onclick="setLanguage('en')">English (EN)</a></li>
+          </ul>
+        </div>
+      </div>
+      <i class="fa fa-bars btn-show-nav"></i>
+    </div>
+  </div>
+  <!-- / Header -->
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <h1>
+          Your style begins with <span>Modalst</span>, discover a world of elegance and beauty with the latest
+          <span>trends in <span>fashion</span></span>
+        </h1>
+        <p>
+          Enjoy a unique shopping experience where quality meets style. Find everything you need to complete your look,
+          from contemporary designs to classic pieces, all curated to help you exude confidence.
+        </p>
+        <div class="hero-buttons" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+          <a href="#" class="btn google-play">
+            Download on Google Play
+            <img src="../image/google-paly.png" alt="Google Play">
+          </a>
+          <a href="#" class="btn app-store">
+            Download on App Store
+            <img src="../image/app-store.png" alt="App Store">
+          </a>
+        </div>
+      </div>
+      <div class="hero-images">
+        <img src="../image/phone1.png" class="phone phone-1" alt="App Screenshot"
+             data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
+        <img src="../image/phone2.png" class="phone phone-2" alt="App Screenshot"
+             data-aos="fade-right" data-aos-duration="1000" data-aos-delay="800">
+      </div>
+    </div>
+  </section>
+  <!-- / Hero Section -->
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="text-content" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <h2>About Us</h2>
+        <p>
+          Modalst is your premier destination for modern elegance, dedicated to offering the latest fashion trends that enhance your beauty and give you a unique look on every occasion.
+        </p>
+        <p>
+          We believe that fashion is not just clothing, but a lifestyle. That’s why we carefully select the finest pieces that combine elegance with comfort, so you can shine with confidence every moment.
+          Shop now and experience a blend of distinction, luxury, and variety!
+        </p>
+      </div>
+      <div class="image-content">
+        <img src="../image/phone3.png" alt="App Image"
+             data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+      </div>
+    </div>
+  </section>
+  <!-- / About Section -->
+
+  <!-- Contact Us Section -->
+  <section class="contact-section" id="contact">
+    <div class="container" data-aos="fade-up" data-aos-duration="1000">
+      <h2 data-aos="fade-down" data-aos-duration="1000">Contact Us</h2>
+      <p data-aos="fade-up" data-aos-duration="1200">
+        For more information about our services and products or to submit a complaint, please fill out the form below.
+      </p>
+
+      <form class="contact-form">
+        <div class="row">
+          <div data-aos="fade-right" data-aos-duration="1200">
+            <label for="name">Full Name</label>
+            <input id="name" type="text" placeholder="Enter your name" required>
+          </div>
+          <div data-aos="fade-left" data-aos-duration="1200">
+            <label for="email">Email Address</label>
+            <input id="email" type="email" placeholder="Enter your email" required>
+          </div>
+        </div>
+        <div class="input-group" data-aos="fade-up" data-aos-duration="1200">
+          <label for="subject">Subject</label>
+          <input id="subject" type="text" placeholder="Enter the subject" required>
+        </div>
+        <div class="input-group" data-aos="fade-up" data-aos-duration="1300">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Enter your message..." required></textarea>
+        </div>
+        <button type="submit" data-aos="zoom-in" data-aos-duration="1400">Send</button>
+      </form>
+    </div>
+  </section>
+  <!-- / Contact Us Section -->
+
+  <!-- Footer -->
+  <footer>
+    <div class="container" data-aos="fade-up" data-aos-duration="1000">
+      <div class="footer-column" data-aos="fade-right" data-aos-duration="1200">
+        <img src="../image/logo.png" alt="Modalst Logo" class="logo">
+        <p><i class="fas fa-map-marker-alt"></i> Kuwait - Al-Jabriya - Block 10 - Street 5</p>
+        <p><i class="fas fa-phone"></i> +96599996086</p>
+        <p><i class="fas fa-envelope"></i> modalst@hotmail.com</p>
+        <div class="app-buttons">
+          <a href="#" class="btn google-play" data-aos="zoom-in" data-aos-duration="1400">
+            Download on Google Play
+            <img src="../image/google-paly.png" alt="Google Play">
+          </a>
+          <a href="#" class="btn app-store" data-aos="zoom-in" data-aos-duration="1400">
+            Download on App Store
+            <img src="../image/app-store.png" alt="App Store">
+          </a>
+        </div>
+      </div>
+      <div class="footer-column" data-aos="fade-left" data-aos-duration="1200">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="merchant-waiting.html">Join Our Waitlist</a></li>
+        </ul>
+      </div>
+      <div class="footer-column" data-aos="fade-right" data-aos-duration="1200">
+        <h3>Information</h3>
+        <ul>
+          <li><a href="terms-conditions.html">Terms &amp; Conditions</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-column" data-aos="fade-left" data-aos-duration="1200">
+        <h3>Follow Us</h3>
+        <ul class="social-links">
+          <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="#"><i class="fab fa-snapchat"></i> Snapchat</a></li>
+          <li><a href="#"><i class="fab fa-tiktok"></i> Tiktok</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright" data-aos="fade-up" data-aos-duration="1200">
+      &copy; 2025. All rights reserved to Modalst.
+    </div>
+  </footer>
+  <!-- / Footer -->
+
+  <!-- Button Floating Contact -->
+  <div class="floating-contact">
+    <div class="contact-menu">
+      <a href="#" target="_blank" class="contact-btn whatsapp" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="#contact" class="contact-btn support" title="Support">
+        <i class="fas fa-headset"></i>
+      </a>
+    </div>
+    <button class="toggle-btn" onclick="toggleContactMenu()">
+      <i class="fas fa-comment-alt"></i>
+    </button>
+  </div>
+  <!-- / Button Floating Contact -->
+  
+  <!-- Load jQuery first -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Load Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <!-- Load AOS Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      AOS.init({
+        once: true, 
+        duration: 1000,
+        easing: "ease-in-out", 
+        disable: function () {
+          return window.innerWidth < 576; 
+        }
+      });
+    });
+  </script>
+  
+  <!-- Load Custom JS File -->
+  <script src="../js/main.js"></script>
+</body>
+</html>
