@@ -78,3 +78,16 @@ footer .social-links li a i {
 footer .app-buttons .btn {
     font-size: 13.5px;
 }
+
+footer .footer-column:first-child {
+    text-align: left !important;
+}
+
+footer .footer-column p {
+    padding-right: 0
+}
+
+footer .footer-column p i {
+    margin-left: 0;
+    margin-right: 7px;
+}
